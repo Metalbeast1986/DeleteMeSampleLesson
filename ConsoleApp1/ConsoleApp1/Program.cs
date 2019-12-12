@@ -8,6 +8,10 @@ namespace ConsoleApp1
         {
             Console.WriteLine(isPrimal(12));
             Console.WriteLine(isPrimal(1));
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine( D20() );
+            }
         }
         static bool isPrimal(int num)
         {
@@ -21,6 +25,12 @@ namespace ConsoleApp1
                 }
             } 
             return result;
+        }
+
+        static int D20()
+        {
+            Random random = new Random();
+            return random.Next(0,20)+1;
         }
     }
 }
